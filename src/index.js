@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import * as serviceWorker from './serviceWorker';
-import StateLessComponent from './component/StateLessComponent';
-import StateFullComponent from './container/StateFullComponent';
-
+import Home from './container/Home/Home.jsx'
 
 
 ReactDOM.render(
   <React.StrictMode> 
-    <StateLessComponent /> 
-    <StateFullComponent />
+    <Home /> 
   </React.StrictMode>, document.getElementById('root')
 );
 
