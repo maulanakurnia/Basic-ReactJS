@@ -3,6 +3,16 @@ import React, {Component} from 'react';
 // import Product from '../Product/Product.jsx';
 import LifeCycleComp from '../LifeCycleComp/LifeCycleComp.jsx';
 class Home extends Component {
+    state = {
+        showComponent : true
+    }
+    componentDidMount(){
+        setTimeout(()=>{
+            this.setState({
+                showComponent: false
+            })
+        }, 15000)
+    }
     render(){
         return(
             <div>
@@ -30,7 +40,10 @@ class Home extends Component {
                 <Product/> */}
                 <p>LifeCycle Component</p>
                 <hr/>
-                <LifeCycleComp/>
+                {
+                    this.state.showComponent ? 
+                    <LifeCycleComp/> : null
+                }
             </div>
         )
     }
