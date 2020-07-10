@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './LifeCycleComp.css';
 // Refrensi Diagram LifeCycle Component 
 // https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
@@ -57,7 +57,11 @@ class LifeCycleCop extends Component {
     render() { 
         console.log('render');
         return (  
-            <button className="btn" onClick={this.changeCount}>Component Button {this.state.count} </button>
+            <Fragment>
+                <p>LifeCycle Component</p>
+                <hr/>
+                <button className="btn" onClick={this.changeCount}>Component Button {this.state.count} </button>
+            </Fragment>
         );
     }
 }
