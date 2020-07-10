@@ -585,8 +585,20 @@
     {
       "userId": 10,
       "id": 100,
-      "title": "at nam consequatur ea labore ea harum",
-      "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+      "title": "terbaru nih",
+      "body": "update dengan PUT"
+    },
+    {
+      "id": 1594374682739,
+      "title": "Tutorial 3",
+      "body": "kontent tutorial 3",
+      "userId": 1
+    },
+    {
+      "id": 1594374769119,
+      "title": "tutorial 4",
+      "body": "tutorial 4",
+      "userId": 1
     }
   ]
 }

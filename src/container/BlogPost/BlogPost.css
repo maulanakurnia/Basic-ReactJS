@@ -46,7 +46,7 @@ content p.desc {
     color: #4a4a4a
 }
 .remove {
-    padding: 12px 18px;
+    padding: 8px 10px;
     background: #E91E63;
     color: white;
     border-radius: 4px;
@@ -54,8 +54,17 @@ content p.desc {
     margin-top: 18px;
     /* border: none; */
 }
-.remove:hover{
+.remove:hover, .update:hover{
     cursor: pointer;
+}
+.update {
+    padding: 8px 10px;
+    background: #8BC34A;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 18px;
+    margin-right: 10px;
 }
 
 .form-add-post {
