@@ -6,6 +6,22 @@ class BlogPost extends Component {
     state = {
         post: [],
     }
+
+    getPostAPI = () => {
+        axios.get('http://127.0.0.1:3000/posts')
+        .then((result) => { //parameter result penamaannya bebas...
+            this.setState({
+                post: result.data
+            })
+        })
+    }
+
+    handleRemove = (data) =>{
+        axios.delete(`http://127.0.0.1:3000/posts/${data}`).then((res) => {
+            this.getPostAPI();
+        });
+    }
+
     componentDidMount(){
         // Pemanggilan API menggunakan Fetch
         // fetch('https://jsonplaceholder.typicode.com/posts')
@@ -17,12 +33,15 @@ class BlogPost extends Component {
         //     })
 
         // Pemanggilan API menggunakan Axios
-        axios.get('http://127.0.0.1:3000/posts')
-            .then((result) => { //parameter result penamaannya bebas...
-                this.setState({
-                    post: result.data
-                })
-            })
+        // axios.get('http://127.0.0.1:3000/posts')
+        //     .then((result) => { //parameter result penamaannya bebas...
+        //         this.setState({
+        //             post: result.data
+        //         })
+        //     })
+
+        // Pemanggilan API menggunakan Axios (menggunakan method)
+        this.getPostAPI();
     }
     render() { 
         return (  
@@ -30,7 +49,7 @@ class BlogPost extends Component {
                 <p className="section-title">Blog Post</p>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} title={post.title} desc={post.body}/>
+                        return <Post key={post.id} data={post} remove={this.handleRemove} />
                     })
                 }
             </Fragment>
