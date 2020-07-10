@@ -17,7 +17,7 @@ class BlogPost extends Component {
         //     })
 
         // Pemanggilan API menggunakan Axios
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('http://127.0.0.1:3000/posts')
             .then((result) => { //parameter result penamaannya bebas...
                 this.setState({
                     post: result.data
