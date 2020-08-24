@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {RootContext} from '../../Home'
+import { GlobalConsumer } from '../../../context';
+
 class Counter extends Component {
     inputChangedHandler = (e) => {
         return e.target.value;
@@ -7,21 +8,13 @@ class Counter extends Component {
 
     render() { 
         return (  
-            <RootContext.Consumer>
-                {
-                    val => {
-                        return (
-                            <div className="counter">
-                                <button className="minus" onClick={()=> val.dispatch({type: "MINUS_ORDER"})}>-</button>
-                                <input className="input-count" type="text" value={val.state.totalOrder} onChange={(e)=> this.inputChangedHandler(e)}/>
-                                <button className="plus" onClick={()=> val.dispatch({type: "PLUS_ORDER"})}>+</button>
-                            </div>
-                        )
-                    }
-                }
-            </RootContext.Consumer>
+            <div className="counter">
+                <button className="minus" onClick={()=> this.props.dispatch({type: "MINUS_ORDER"})}>-</button>
+                <input className="input-count" type="text" value={this.props.state.totalOrder} onChange={(e)=> this.inputChangedHandler(e)}/>
+                <button className="plus" onClick={()=> this.props.dispatch({type: "PLUS_ORDER"})}>+</button>
+            </div>
         );
     }
 }
 
-export default Counter;
+export default GlobalConsumer(Counter);
