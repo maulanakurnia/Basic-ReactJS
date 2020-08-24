@@ -16,12 +16,14 @@ class Product extends Component {
     render() { 
         return (  
             <Fragment>
+                <p>Halaman Product</p>
+                <hr/>
                 <div className="header">
                     <div className="logo">
-                        <img src="https://etanee.id/img/content/img_logo_etanee_white.svg" alt=""/>
+                        <img src="static/icon/img_logo_etanee_white.svg" alt=""/>
                     </div>
                     <div className="troley">
-                        <img src="https://etanee.id/img/icon/ic_cart_white.svg" alt=""/>
+                        <img src="static/icon/ic_cart_white.svg" alt=""/>
                         <div className="count">{this.state.order}</div>
                     </div>
                 </div>    
