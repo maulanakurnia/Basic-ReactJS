@@ -44,11 +44,6 @@
     -webkit-box-orient: vertical;
 }
 
-.content p.title:hover{
-    cursor: pointer;
-    color: rgb(35, 83, 128);
-}
-
 .content p.desc {
     margin: 0px;
     font-size: 16px;

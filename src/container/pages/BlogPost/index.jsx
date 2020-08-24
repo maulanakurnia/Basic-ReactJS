@@ -97,10 +97,6 @@ class BlogPost extends Component {
         })
     }
 
-    handleDetail = (id) => {
-        this.props.history.push(`/detail-post/${id}`);
-    }
-
     // LifeCycle
     componentDidMount(){
         this.getPostAPI();
@@ -122,7 +118,7 @@ class BlogPost extends Component {
                 <div className="flex">
                     {
                         this.state.post.map(post => {
-                            return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} goDetail={this.handleDetail}/>
+                            return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate}/>
                         })
                     }
                 </div>
