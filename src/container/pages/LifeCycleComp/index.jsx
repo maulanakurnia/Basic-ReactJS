@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import {connect} from 'react-redux';
 import './LifeCycleComp.css'
 
 // LifeCycle yang sering digunakan antara lain: 
@@ -70,9 +71,17 @@ class LifeCycleComp extends Component {
                 <p>Halaman LifeCycle</p>
                 <hr/>
                 <button className="btn" onClick={this.changeCount}>Component Button {this.state.count}</button>
+                <hr/>
+                <p>Total Order: {this.props.order}</p>
             </Fragment>
         );
     }
 }
- 
-export default LifeCycleComp;
+
+const mapStateToProps = state => {
+    return {
+        order: state.totalOrder
+    }
+}
+
+export default connect(mapStateToProps)(LifeCycleComp);
