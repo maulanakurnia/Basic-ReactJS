@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import {connect} from 'react-redux';
 import './LifeCycleComp.css'
-
+import {RootContext} from '../../Home'
 // LifeCycle yang sering digunakan antara lain: 
 // - consturctor
 // - render
@@ -67,21 +66,23 @@ class LifeCycleComp extends Component {
     render() { 
         console.log('render')
         return (  
-            <Fragment>
-                <p>Halaman LifeCycle</p>
-                <hr/>
-                <button className="btn" onClick={this.changeCount}>Component Button {this.state.count}</button>
-                <hr/>
-                <p>Total Order: {this.props.order}</p>
-            </Fragment>
+            <RootContext.Consumer>
+                {
+                    val => {
+                        return (
+                            <Fragment>
+                                <p>Halaman LifeCycle</p>
+                                <hr/>
+                                <button className="btn" onClick={this.changeCount}>Component Button {this.state.count}</button>
+                                <hr/>
+                                <p>Total Order: {val.state.totalOrder}</p>
+                            </Fragment>
+                        )
+                    }
+                }
+            </RootContext.Consumer>
         );
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        order: state.totalOrder
-    }
-}
-
-export default connect(mapStateToProps)(LifeCycleComp);
+export default LifeCycleComp;
