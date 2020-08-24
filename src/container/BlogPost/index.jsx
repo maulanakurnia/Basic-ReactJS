@@ -19,9 +19,8 @@ class BlogPost extends Component {
             // })
         
         // Menggunakan Axios (library tambahan) 
-            axios.get('https://jsonplaceholder.typicode.com/posts')
+            axios.get('http://localhost:3001/posts')
             .then((res) => {
-                console.log(res.data)
                 this.setState({
                     post: res.data
                 })
