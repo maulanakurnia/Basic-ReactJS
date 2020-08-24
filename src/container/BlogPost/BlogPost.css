@@ -50,6 +50,16 @@
     color: #4a4a4a;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.btn-remove {
+    margin-top: 5px;
+    padding: 5px 18px;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }

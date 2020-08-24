@@ -8,23 +8,25 @@ class BlogPost extends Component {
         post: []
     }
 
-    componentDidMount(){
-        // Menggunakan Fetch (bawaan ES6)
-            // fetch('https://jsonplaceholder.typicode.com/posts')
-            // .then(response => response.json())
-            // .then(json => {
-            //     this.setState({
-            //         post: json
-            //     })
-            // })
-        
-        // Menggunakan Axios (library tambahan) 
-            axios.get('http://localhost:3001/posts')
-            .then((res) => {
-                this.setState({
-                    post: res.data
-                })
+    getPostAPI = () => {
+        axios.get('http://localhost:3001/posts')
+        .then((res) => {
+            this.setState({
+                post: res.data
             })
+        })
+    }
+
+    handleRemove = (id) => {
+        console.log(id)
+        axios.delete(`http://localhost:3001/posts/${id}`)
+        .then(() => { 
+            this.getPostAPI(); 
+        })
+    }
+
+    componentDidMount(){
+        this.getPostAPI();
     }
 
     render() { 
@@ -33,7 +35,7 @@ class BlogPost extends Component {
                 <p className="section-title">Blog Post</p>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} title={post.title} desc={post.body}/>
+                        return <Post key={post.id} data={post} remove={this.handleRemove}/>
                     })
                 }
             </Fragment>
