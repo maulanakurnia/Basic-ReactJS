@@ -7,7 +7,6 @@ class Counter extends Component {
     }
 
     render() { 
-        console.log(this)
         return (  
             <div className="counter">
                 <button className="minus" onClick={()=> this.props.dispatch({type: "MINUS_ORDER"})}>-</button>
