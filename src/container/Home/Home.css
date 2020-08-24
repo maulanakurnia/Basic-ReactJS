@@ -9,3 +9,7 @@
     text-decoration: none;
     color: white;
 }
+
+.navigation a.active {
+    color: rgb(40, 104, 163);
+}

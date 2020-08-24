@@ -4,7 +4,7 @@ export default (props) => {
     return(
         <Fragment>
             <div className="post">
-                <div className="img-thumb">
+                <div className="img-thumb-post">
                     <img src="https://placeimg.com/200/150/tech" alt="dummy"/>
                 </div>
                 <div className="content">

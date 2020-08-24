@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Route, NavLink} from 'react-router-dom'
 
 // pages
 import Product from "../pages/Product";
@@ -19,10 +19,10 @@ class Home extends Component {
     return (
       <BrowserRouter>
         <div className="navigation">
-          <Link to="/">Blog</Link>
-          <Link to="/product">Product</Link>
-          <Link to="/lifeCycle">LifeCycle</Link>
-          <Link to="/youtube">Youtube</Link>
+          <NavLink exact to="/">Blog</NavLink>
+          <NavLink to="/product">Product</NavLink>
+          <NavLink to="/lifeCycle">LifeCycle</NavLink>
+          <NavLink to="/youtube">Youtube</NavLink>
         </div>
         <Route path="/" exact component={BlogPost}/>
         <Route path="/product" component={Product}/>
