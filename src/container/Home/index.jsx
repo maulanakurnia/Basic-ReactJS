@@ -1,8 +1,21 @@
 import React, { Component, Fragment } from "react";
 import YoutubeComp from "../../component/YoutubeComp";
-import Product from "../Product";
+// import Product from "../Product";
+import LifeCycleComp from "../LifeCycleComp";
 
 class Home extends Component {
+  state = {
+    showComponent: true
+  }
+  
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        showComponent: false
+      })
+    }, 15000)
+  }
+
   render() {
     return (
       <Fragment>
@@ -25,9 +38,14 @@ class Home extends Component {
             title="Tutorial React JS - Bagian 4" 
             desc="5x ditonton, 4 hari yang lalu"/>
         <YoutubeComp /> */}
-        <p>Counter</p>
+        {/* <p>Counter</p>
         <hr/>
-        <Product/>
+        <Product/> */}
+        <p>LifeCycle Component</p>
+        <hr/>
+        {
+          this.state.showComponent ? <LifeCycleComp/> : null
+        }
       </Fragment>
     );
   }
