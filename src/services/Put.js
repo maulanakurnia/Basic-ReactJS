@@ -1,9 +1,9 @@
 import axios from 'axios';
 import {OnlineRoot, RootPath} from './config'
 
-const Post = (root, path, data) => {    
+const Put = (root, path, data) => {    
     const promise = new Promise((resolve, reject) => {
-        axios.post(`${root ? OnlineRoot : RootPath}/${path}`, data)
+        axios.put(`${root ? OnlineRoot : RootPath}/${path}`, data)
         .then((res) => {
             resolve(res);
         }, err => {
@@ -14,4 +14,4 @@ const Post = (root, path, data) => {
     return promise
 }
 
-export default Post;
+export default Put;
