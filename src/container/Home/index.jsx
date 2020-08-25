@@ -8,6 +8,7 @@ import LifeCycleComp from "../pages/LifeCycleComp";
 import BlogPost from "../pages/BlogPost";
 import YoutubeCompPage from "../pages/YoutubeCompPage";
 import DetailPost from "../pages/BlogPost/DetailPost";
+import Hook from "../pages/Hooks";
 
 // css
 import './Home.css'
@@ -21,12 +22,14 @@ class Home extends Component {
             <NavLink to="/product">Product</NavLink>
             <NavLink to="/lifeCycle">LifeCycle</NavLink>
             <NavLink to="/youtube">Youtube</NavLink>
+            <NavLink to="/react-hook">React Hook</NavLink>
           </div>
           <Route path="/" exact component={BlogPost}/>
           <Route path="/detail-post/:id" component={DetailPost}/>
           <Route path="/product" component={Product}/>
           <Route path="/lifeCycle" component={LifeCycleComp}/>
           <Route path="/youtube" component={YoutubeCompPage}/>
+          <Route path="/react-hook" component={Hook}/>
       </BrowserRouter>
     );
   }
