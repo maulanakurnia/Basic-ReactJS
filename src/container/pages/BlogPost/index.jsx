@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react';
-import Post from '../../../component/Post'
-import './BlogPost.css'
 import axios from 'axios';
+import API from '../../../services';
+import Post from '../../../component/Post'
+import React, { Component, Fragment } from 'react';
+import './BlogPost.css'
 
 class BlogPost extends Component {
     state = {
@@ -12,15 +13,15 @@ class BlogPost extends Component {
             body: '',
             userId: 1
         },
-        isUpdate: false
+        isUpdate: false,
+        comments: []
     }
 
     // interaksi API (GET, POST, PUT)
     getPostAPI = () => {
-        axios.get('http://localhost:3001/posts?_sort=id&_order=desc')
-        .then((res) => {
+        API.getNewsBlog().then(res => {
             this.setState({
-                post: res.data
+                post: res
             })
         })
     }

@@ -42,3 +42,33 @@
     font-size: 16px;
     color: black;
 }
+
+.wrapper-detail-comments {
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(149,157,165,.2);
+}
+
+.detail-comments {
+    border-bottom: 1px solid #e1e4e8;
+}
+.detail-comments:hover {
+    background-color: rgb(81, 148, 224);
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+}
+
+.email-detail-comments {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+.body-detail-comments {
+    margin-left: 25px;
+    margin-top: -10px;
+    margin-right: 25px;
+}
