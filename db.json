@@ -539,6 +539,18 @@
       "id": 97,
       "title": "title PUT",
       "body": "blog content PUT"
+    },
+    {
+      "id": 1598321824825,
+      "title": "coba ahhh",
+      "body": "asd",
+      "userId": 1
+    },
+    {
+      "id": 1598321860442,
+      "title": "sekali algi",
+      "body": "yooow",
+      "userId": 1
     }
   ],
   "comments": [],

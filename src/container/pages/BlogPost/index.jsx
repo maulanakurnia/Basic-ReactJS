@@ -30,6 +30,15 @@ class BlogPost extends Component {
         axios.post('http://localhost:3001/posts', this.state.formBlogPost)
         .then(() => {
             this.getPostAPI();
+            this.setState({
+                isUpdate: false,
+                formBlogPost : {
+                    id: 1,
+                    title: '',
+                    body: '',
+                    userId: 1
+                }
+            })
         },(err) => {
             console.log('error : ', err )
         })
