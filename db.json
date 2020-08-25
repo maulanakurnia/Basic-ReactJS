@@ -3,7 +3,7 @@
     {
       "userId": 1,
       "id": 7,
-      "title": "Tutorial React JS - Global API Services",
+      "title": "Tutorial React JS - Global API Services 224",
       "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
     },
     {
@@ -539,6 +539,36 @@
       "id": 97,
       "title": "title PUT",
       "body": "blog content PUT"
+    },
+    {
+      "id": 1598319358965,
+      "title": "ini titlenya",
+      "body": "ini contentnya",
+      "userId": 1
+    },
+    {
+      "id": 1598319403044,
+      "title": "ini apa ya?",
+      "body": "ya apa ini?",
+      "userId": 1
+    },
+    {
+      "id": 1598319424659,
+      "title": "ini title",
+      "body": "ini teuing",
+      "userId": 1
+    },
+    {
+      "id": 1598320662404,
+      "title": "coba lagi ",
+      "body": "coba coba",
+      "userId": 1
+    },
+    {
+      "id": 1598320891402,
+      "title": "lagi ",
+      "body": "lagiiiiiii",
+      "userId": 1
     }
   ],
   "comments": [],

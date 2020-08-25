@@ -13,7 +13,7 @@ class DetailPost extends Component {
 
     componentDidMount(){
         let id = this.props.match.params.id
-        API.getDetailPost(`${id}`).then((res) =>{
+        API.getDetailPost(id).then((res) =>{
             this.setState({
                 post:{
                     title: res.title,
