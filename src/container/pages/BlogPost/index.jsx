@@ -1,4 +1,3 @@
-import axios from 'axios';
 import API from '../../../services';
 import Post from '../../../component/Post'
 import React, { Component, Fragment } from 'react';
@@ -46,7 +45,7 @@ class BlogPost extends Component {
     putDataToAPI = () => {
         let result = window.confirm('yakin ingin mengubah data?')
         if(result){
-            axios.put(`http://localhost:3001/posts/${this.state.formBlogPost.id}`, this.state.formBlogPost)
+            API.updateNewsBlog(this.state.formBlogPost, this.state.formBlogPost.id)
             .then(() => {
                 this.getPostAPI();
                 this.setState({
@@ -83,7 +82,7 @@ class BlogPost extends Component {
     handleRemove = (id) => {
         let result = window.confirm('yakin ingin menghapus?')
         if(result){
-            axios.delete(`http://localhost:3001/posts/${id}`)
+            API.deletNewsBlog(id)
             .then(() => { 
                 this.getPostAPI(); 
             })

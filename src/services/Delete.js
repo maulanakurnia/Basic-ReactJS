@@ -1,17 +1,17 @@
 import axios from 'axios';
 import {OnlineRoot, RootPath} from './config'
 
-const Post = (root, path, data) => {    
+const Delete = (root, path, data) => {
     const promise = new Promise((resolve, reject) => {
-        axios.post(`${root ? OnlineRoot : RootPath}/${path}`, data)
+        axios.delete(`${root ? OnlineRoot : RootPath}/${path}${data ? '/'&&data : ''}`)
         .then((res) => {
-            resolve(res);
+            resolve(res.data);
         }, err => {
             reject(err);
         })
     })
 
-    return promise
+    return promise;
 }
 
-export default Post;
+export default Delete;
